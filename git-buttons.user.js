@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Create Git Branch
 // @namespace    https://helpdesk.bakecrafters.com
-// @version      1.1
+// @version      1.1.5
 // @description  This allows users to copy/paste git commands to create and set the upstream for branches related to tickets
 // @author       Alex O'Connor
 // @match        https://helpdesk.bakecrafters.com
