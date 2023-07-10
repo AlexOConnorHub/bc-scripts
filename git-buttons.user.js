@@ -5,6 +5,7 @@
 // @description  This allows users to copy/paste git commands to create and set the upstream for branches related to tickets
 // @author       Alex O'Connor
 // @match        https://helpdesk.bakecrafters.com
+// @match        https://10.10.200.6
 // @icon         https://bakecrafters.info/images/BC-logo.png
 // @grant        none
 // ==/UserScript==
@@ -13,7 +14,7 @@ let init = false;
 
 var observer = new MutationObserver(function(mutations) {
     let menu = getMenu();
-    if (menu.children.length === 4 && !init) {
+    if (menu.children.length < 6 && !init) {
         init = true;
         let makeBranch = menuItem(" Checkout Branch");
         let makePR = menuItem(" Create PR");
