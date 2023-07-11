@@ -97,7 +97,7 @@ function checkoutBranch(e) {
     let command = `git checkout `;
     let activeElement = document.activeElement;
     if (confirm("Create new branch for this ticket")) {
-        command += `-b ${branch} origin/production`
+        command += `-b ${branch} production`
     } else {
         command += branch;
     }
