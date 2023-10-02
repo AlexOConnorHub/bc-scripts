@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Copy Wommbat otp cookie
 // @namespace    https://secure.bakecrafters.com
-// @version      1.1
+// @version      1.2
 // @description  Copy trust_device cookie from prod to test environments
 // @author       Alex O'Connor
 // @match        https://secure.bc.test/session/create*
