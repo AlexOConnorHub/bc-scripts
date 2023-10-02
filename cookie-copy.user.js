@@ -15,11 +15,13 @@
 (function() {
     'use strict';
     if (document.URL.includes("secure.bc.test") || document.URL.includes("secure.bakecrafters.info")) {
-        document.cookie = GM_getValue('otp_cookie') + '; path=/';
+        let cookie = GM_getValue('otp_cookie').split('=');
+        cookie[1] = decodeURIComponent(cookie[1]);
+        document.cookie = `${cookie[0]}=${cookie[1]}; path=/`;
     } else if (document.URL.includes("secure.bakecrafters.com")) {
         let cookie = document.cookie.split('; ').filter((item) => { return item.split('=')[0] === 'trust_device'; } )
         if (cookie.length === 1) {
-            GM_setValue('otp_cookie', cookie);
+            GM_setValue('otp_cookie', cookie[0]);
         }
     }
 })();
